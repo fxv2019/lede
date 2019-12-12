@@ -98,11 +98,11 @@ jobs:
           # 
 
           # 编译x64固件:
-          # cat >> .config <<EOF
-          # CONFIG_TARGET_x86=y
-          # CONFIG_TARGET_x86_64=y
-          # CONFIG_TARGET_x86_64_Generic=y
-          # EOF
+          cat >> .config <<EOF
+          CONFIG_TARGET_ramips=y
+          CONFIG_TARGET_ramips_mt7621=y
+          CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
+          EOF
 
           # 固件压缩:
           # cat >> .config <<EOF
@@ -188,9 +188,7 @@ jobs:
           # # CONFIG_VMDK_IMAGES is not set
           # EOF
           
-          CONFIG_TARGET_ramips=y
-          CONFIG_TARGET_ramips_mt7621=y
-          CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
+          cat >> .config <<EOF         
           CONFIG_ARIA2_BITTORRENT=y
           CONFIG_ARIA2_NOXML=y
           CONFIG_ARIA2_OPENSSL=y
@@ -288,7 +286,7 @@ jobs:
           CONFIG_boost-runtime-shared=y
           CONFIG_boost-static-and-shared-libs=y
           CONFIG_boost-variant-release=y
-
+          EOF
           # 
           # ========================固件定制部分结束========================
           # 
